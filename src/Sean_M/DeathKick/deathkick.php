@@ -19,4 +19,9 @@ class Main extends PluginBase implements Listener{
                $p->kick("You have died!");
           }
      }
+     
+     public function onDisable(){
+          $this->getserver()->getpluginmanager()->deleteevent($this)
+          $this->getlogger()->info("DeathKick disabled!")
+     }
 }
